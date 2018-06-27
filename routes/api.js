@@ -10,7 +10,12 @@ router.get('/vacancy', function(req, res, next){
   //does a vacancy exist?
   //for now - just do this randomly
   let result = Math.random() >= 0.1;
-  res.send(result);
+  let response = {
+    "data" : {
+      "vacancy" : result
+    }
+  };
+  res.send(response);
 });
 
 
